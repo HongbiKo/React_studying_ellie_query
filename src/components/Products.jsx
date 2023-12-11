@@ -10,6 +10,7 @@ export default function Products() {
       const response = await fetch(`data/${checked ? 'sale_' : ''}products.json`);
       return response.json();
     },
+    staleTime: 5000,
   }); 
   const handleChange = () => setChecked((prev) => !prev);
 
